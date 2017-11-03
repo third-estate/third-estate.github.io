@@ -9,6 +9,7 @@
 bin/
 Web.config
 package.config
+GitHubPage.sln
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
