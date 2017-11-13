@@ -2,31 +2,37 @@ article {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: medium solid grey;
 }
 
 article > div {
-  width: 50%;
-  min-width: 300px;
+  text-align: center;
+  margin: 5px auto;
+  height: 100%;
+  border: medium solid black;
 }
 
-div.pics {
+div.pic {
   display: flex;
+  width: 49%;
+  min-height: 150px;
   background-color: orange;
 }
 
-div.pics > div {
-  margin: 5px 5px 5px 5px;
-  width: 50%;
-  height: 100%;
-  min-height: 150px;
-  background-color: red;
-}
-
 div.text {
+  padding: 2%;
   background-color: lightblue;
 }
 
 div.text > p {
+  font-size: 1.5em;
+  font-family: sans-serif;
+}
+
+div.text > button {
+  font-size: 1.2em;
   font-family: sans-serif;
 }
 
