@@ -1,35 +1,52 @@
+nav {
+  position: sticky;
+}
+
+section {
+}
+
 article {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
   width: 100%;
+  margin-bottom: 15px;
+  border-bottom: 5px;
+  border-bottom-color: red;
 }
 
 article > div {
-  width: 49%;
-  min-width: 300px;
 }
 
-div.pics {
-  display: flex;
-  background-color: orange;
-}
-
-div.pics > div {
-  margin: 5px 5px 5px 5px;
-  width: 50%;
+div.pic {
   height: 100%;
   min-height: 150px;
+  width: 50%;
+}
+
+div.pic :first {
   background-color: red;
 }
 
 div.text {
   background-color: lightblue;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  text-align: center;
 }
 
 div.text > p {
   font-family: sans-serif;
 }
 
+div.text > button {
+}
+
 img {
   max-width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
