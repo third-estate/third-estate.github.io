@@ -9,6 +9,8 @@ article {
   flex-wrap: wrap;
   flex-direction: row;
   width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 15px;
   padding-bottom: 15px;
   border-bottom: medium solid grey;
@@ -23,13 +25,14 @@ article > div {
 
 div.pic {
   display: flex;
-  width: 49%;
+  width: 48%;
   min-height: 150px;
   background-color: orange;
 }
 
 div.pic > p {
   font-size: 2em;
+  width: 100%;
 }
 
 div.text {
@@ -58,8 +61,11 @@ img {
   }
 
   article {
-    width: 48%;
-    background-color: purple;
-    border: medium dashed blue;
+    width: 45%;
+/*    background-color: purple; */
+    padding-bottom: 7px;
+    padding-left: 7px;
+    padding-right: 7px;
+    border-bottom: 0;
   }
 }
