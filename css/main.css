@@ -4,6 +4,16 @@ section {
   flex-direction: column;
 }
 
+section.tab-section {
+  display: none;
+}
+
+#tab1:checked ~ #tab-section1,
+#tab2:checked ~ #tab-section2,
+#tab3:checked ~ #tab-section3 {
+  display: flex;
+}
+
 article {
   display: flex;
   flex-wrap: wrap;
