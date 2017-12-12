@@ -2,33 +2,14 @@
 <html>
 <head>
   <title>
-    Layout test
+    vuejs test
   </title>
-  <link rel="stylesheet" href="css/main.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script src="/js/testvue.js"></script>
 </head>
 <body>
-  <input type="radio" class="first-section" id="tab1" name="tabs" checked>
-  <label for="tab1">First</label>
-  <input type="radio" class="first-section" id="tab2" name="tabs">
-  <label for="tab2">Second</label>
-  <input type="radio" class="first-section" id="tab3" name="tabs">
-  <label for="tab3">Third</label>
-
-  <header>
-    Intro
-  </header>
-
-  <section class="tab-section" id="tab-section1">
-    <div style="width: 100%; height: 200px; background-color: purple;">
-    </div>
-  </section>
-  <section class="tab-section" id="tab-section2">
-    <div style="width: 100%; height: 200px; background-color: green;">
-    </div>
-  </section>
-  <section class="tab-section" id="tab-section3">
-    <div style="width: 100%; height: 200px; background-color: blue;">
-    </div>
-  </section>
+  <div id="app">
+    {{message}}
+  </div>
 </body>
 </html>
