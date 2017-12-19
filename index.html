@@ -6,10 +6,15 @@
   </title>
 </head>
 <body>
-  <script src="/js/vuedev.js"></script>
-  <div id="app">
-    {{ message }}
-  </div>
-  <script src="/js/testvue.js"></script>
+  <section id="calculation">
+    <script src="/js/vuedev.js"></script>
+    <div id="computedValue">
+      <label for="inpHeight">Height: </label>
+      <input id="inpHeight" type="number" v-model.number="height" min="0" max="40000" placeholder="Enter number"></input>
+      <p>{{ doubled }}</p>
+      <p>{{ squared() }}</p>
+    </div>
+    <script src="/js/testvue.js"></script>
+  </section>
 </body>
 </html>

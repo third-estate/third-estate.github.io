@@ -1,6 +1,18 @@
-var app = new Vue({
-  el: '#app',
+var calculation = new Vue({
+  el: '#computedValue',
   data: {
-    message: 'Hello Vue! and Hello World! downloaded script'
+    height: 4000
+  },
+  computed: {
+    doubled: function() {
+      console.log("doubling");
+      return this.height * 2;
+    }
+  },
+  methods: {
+    squared: function() {
+      console.log("squaring");
+      return Math.pow(this.height, 2);
+    }
   }
 })
