@@ -3,30 +3,35 @@
 
 	var app = {
 		articles: '',
+		postURI: 'https://prod-23.westeurope.logic.azure.com:443/workflows/a3c7a175f31a4beba595dc6d7b6ef684/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=fdPU9jw5ZQ9LdGNCrI-EPnQa7jfOm04Ngi3wVyxYknc',
 		elTeaserArticle: document.getElementById("one")
 	};
 
 	// events
 
-	document.getElementById('contactBtn').addEventListener('click', function() {
-		console.log("clicked");
-		// https://prod-23.westeurope.logic.azure.com:443/workflows/a3c7a175f31a4beba595dc6d7b6ef684/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=fdPU9jw5ZQ9LdGNCrI-EPnQa7jfOm04Ngi3wVyxYknc
-	})
-
+	document.getElementById('contactForm').addEventListener('submit', function() {
+		app.XHR(app.postURI, 'POST', JSON.stringify({ name: document.getElementById('name').value, email: document.getElementById('email').value, message: document.getElementById('message').value }))
+			.then(function(response) {
+				console.log("worked: " + response);
+			})
+			.catch(function(err) {
+				console.log("something when wrong: " + err);
+			});
+	});
 
 	// data loader
 
-	app.XHR = function (url) {
+	app.XHR = function (url, method = 'GET', msg = '') {
 		// Return a new promise.
 		return new Promise(function (resolve, reject) {
 			// Do the usual XHR stuff
 			var req = new XMLHttpRequest();
-			req.open('GET', url);
+			req.open(method, url);
 
 			req.onload = function () {
 				// This is called even on 404 etc
 				// so check the status
-				if (req.status == 200) {
+				if ((req.status >= 200) && (req.status <= 202)) {
 					// Resolve the promise with the response text
 					resolve(req.response);
 				}
@@ -42,7 +47,7 @@
 			};
 
 			// Make the request
-			req.send();
+			req.send(msg);
 		});
 	};
 
