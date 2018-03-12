@@ -2426,6 +2426,8 @@
 		color: #fff;
 	}
 
+
+
 	input[type="text"],
 	input[type="password"],
 	input[type="email"],
@@ -3472,7 +3474,7 @@
 
 	}
 
-	@media screen and (max-width: 480px) {
+	@media screen and (max-width: 736px) {
 
 		#header {
 			min-width: 320px;
@@ -3549,7 +3551,7 @@
 			transition: color 0.2s ease-in-out;
 			-webkit-tap-highlight-color: transparent;
 			border: 0;
-			color: #903073;
+			color: #6D0D50;
 			cursor: pointer;
 			display: block;
 			height: 3.25em;
@@ -3809,6 +3811,10 @@
 					font-size: 5em;
 				}
 
+				#banner .more {
+					display: none;
+				}
+
 		}
 
 		@media screen and (max-width: 590px) {
@@ -3817,9 +3823,9 @@
 				font-size: 3em;
 			}
 
-			#banner .more {
+			/* #banner .more {
 				display: none;
-			}
+			} */
 
 		}
 
@@ -4276,6 +4282,7 @@
 				background-color: transparent;
 				box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.25);
 				color: #ffffff !important;
+				min-width: 200px;
 			}
 
 				#footer input[type="submit"].alt:hover,
@@ -4313,6 +4320,17 @@
 
 		#footer label {
 			color: #ffffff;
+		}
+
+		#footer ul.actions > p {
+			/* display: block; */
+			color: #fff;
+			margin-top: 1em;
+		}
+
+		#footer ul.actions > p.error {
+			/* display: block; */
+			color: #D6A32D;
 		}
 
 		#footer input[type="text"],
